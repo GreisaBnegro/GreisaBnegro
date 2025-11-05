@@ -1,7 +1,7 @@
 <h1 align="center">Hi ✨🐾✨, I'm an 💫 Artist 🏹 Knight 👑 Royale ⚜</h1>
 <h3 align="center">A passionate artist in Multiple forms. I like languages, especially Japanese (日本語), French (Français), Spanish (Español), and I am still learning them.</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=greisabnegro&label=Profile%20views&color=0e75b6&style=flat" alt="greisabnegro" /> </p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=greisabnegro&label=Profile%20views&color=8442f4&style=flat" alt="greisabnegro" /> </p>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=greisabnegro" alt="greisabnegro" /></a> </p>
 
