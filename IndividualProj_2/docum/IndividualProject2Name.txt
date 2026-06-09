@@ -1,0 +1,14 @@
+Individual project 2 
+Night Tourmaline Archive (crystal lattice) - Confidential file
+Night Tourmaline Archive: Design and Development of a Modular, Confidential Scientific Case-File System
+
+	1. Useful for me
+	2. Relevant for me
+	3. Popular for me
+	4. Solves problem for memorizing some stuff
+	5. Improve existing state-of-the-art ✔
+	6. Dedicated to specific needs of the society, not need to memorize the information
+	7. Narrow-down as much as possible ✔
+	8. 
+	
+	This is a project based on few interests, it would like a secret crime file in which each case files that are inside are a scientific "exploration" and learning material, potentially including simulations if feasible.

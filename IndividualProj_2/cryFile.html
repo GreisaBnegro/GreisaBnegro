@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Phase Simulator</title>
+
+    <link rel="stylesheet" href="./css/cryStyle.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <header>
+        <h1>🌎 Water Phase Simulator</h1>
+        <p>Temperature • Weather • Snow Crystals</p>
+    </header>
+
+    <!-- CONTROLS -->
+
+    <section class="panel">
+
+        <h2>Simulation Controls</h2>
+
+        <div class="grid">
+
+            <div class="field">
+                <label for="initialTemp">Initial Temperature (°C)</label>
+                <input
+                    type="number"
+                    id="initialTemp"
+                    value="-20">
+            </div>
+
+            <div class="field">
+                <label for="ambientTemp">Ambient Temperature (°C)</label>
+                <input
+                    type="number"
+                    id="ambientTemp"
+                    value="20">
+            </div>
+
+            <div class="field">
+                <label for="pressure">Pressure (atm)</label>
+                <input
+                    type="range"
+                    id="pressure"
+                    min="0.1"
+                    max="3"
+                    step="0.1"
+                    value="1">
+                <span id="pressureValue">1 atm</span>
+            </div>
+
+            <div class="field">
+                <label for="humidity">Humidity (%)</label>
+                <input
+                    type="range"
+                    id="humidity"
+                    min="0"
+                    max="100"
+                    value="70">
+                <span id="humidityValue">70%</span>
+            </div>
+
+            <div class="field">
+                <label for="material">Material</label>
+
+                <select id="material">
+                    <option value="0.01">Vacuum Flask</option>
+                    <option value="0.02">Steel</option>
+                    <option value="0.03">Aluminum</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="insulation">Insulation Thickness (cm)</label>
+                <input
+                    type="number"
+                    id="insulation"
+                    value="5">
+            </div>
+
+        </div>
+
+        <div class="buttonRow">
+
+            <button id="startBtn">▶ Start</button>
+
+            <button id="pauseBtn">⏸ Pause</button>
+
+            <button id="resetBtn">↺ Reset</button>
+
+            <button id="recordBtn">📝 Record Observation</button>
+
+            <button id="exportBtn">💾 Export Notes</button>
+
+        </div>
+
+    </section>
+
+    <!-- STATUS -->
+
+    <section class="panel">
+
+        <h2>Current State</h2>
+
+        <div class="statusGrid">
+
+            <div class="card">
+                <h3>Temperature</h3>
+                <div id="currentTemp">-- °C</div>
+            </div>
+
+            <div class="card">
+                <h3>Phase</h3>
+                <div id="phaseDisplay">--</div>
+            </div>
+
+            <div class="card">
+                <h3>Weather</h3>
+                <div id="weatherDisplay">--</div>
+            </div>
+
+            <div class="card">
+                <h3>Crystal Type</h3>
+                <div id="crystalDisplay">--</div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TIME -->
+
+    <section class="panel">
+
+        <h2>Time</h2>
+
+        <input
+            type="range"
+            id="timeSlider"
+            min="0"
+            max="1000"
+            value="0">
+
+        <div id="timeDisplay">
+            Time: 0 min
+        </div>
+
+    </section>
+
+    <!-- SCENE -->
+
+    <section class="panel">
+
+        <h2>Simulation Scene</h2>
+
+        <div id="scene">
+
+            <div id="backgroundLayer"></div>
+
+            <div id="cloudLayer"></div>
+
+            <div id="weatherLayer"></div>
+
+            <div id="waterLayer"></div>
+
+            <div id="moleculeLayer"></div>
+
+            <div id="phaseLayer"></div>
+
+            <div id="steamLayer"></div>
+
+            <div id="snowLayer"></div>
+
+        </div>
+
+    </section>
+
+    <!-- GRAPH -->
+
+    <section class="panel">
+
+        <h2>Temperature Graph</h2>
+
+        <canvas
+            id="graph"
+            width="900"
+            height="350">
+        </canvas>
+
+    </section>
+
+    <!-- MOLECULES -->
+
+    <section class="panel">
+
+        <h2>Molecular Motion</h2>
+
+        <canvas
+            id="moleculeCanvas"
+            width="900"
+            height="350">
+        </canvas>
+
+    </section>
+
+    <!-- SNOW CRYSTAL -->
+
+    <section class="panel">
+
+        <h2>Snow Crystal Viewer</h2>
+
+        <div id="crystalContainer">
+
+            <svg
+                id="crystalSVG"
+                width="300"
+                height="300"
+                viewBox="0 0 300 300">
+            </svg>
+
+        </div>
+
+        <div id="crystalNotes">
+            Crystal information will appear here.
+        </div>
+
+    </section>
+
+    <!-- SCIENTIFIC NOTES -->
+
+    <section class="panel">
+
+        <h2>Scientific Notes</h2>
+
+        <div id="scientificNotes">
+            Ready.
+        </div>
+
+    </section>
+
+    <!-- NOTEBOOK -->
+
+    <section class="panel">
+
+        <h2>Laboratory Notebook</h2>
+
+        <div id="notebookEntries"></div>
+
+    </section>
+
+</div>
+
+<script
+    type="module"
+    src="./js/Cry/core/cryScript.js">
+</script>
+
+</body>
+</html>

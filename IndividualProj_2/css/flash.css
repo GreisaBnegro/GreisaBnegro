@@ -1,0 +1,114 @@
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap");
+
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background: #8e8e8e;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+    gap:20px;
+    place-items: center; 
+}
+
+h1, h2, h3 {
+text-align: center;
+  color: #1E2A38;
+  background: linear-gradient(110deg, rgba(255,255,255,0) 38%, rgba(255,255,255,0.65) 47%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.65) 53%, rgba(255,255,255,0) 62%), linear-gradient(180deg, #1E2A38 0%, #9FB3C8 16%, #FFFFFF 30%, #A7B7C6 47%, #41525F 52%, #0E141A 62%, #5C7385 78%, #D7E2EC 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.metallic-text{
+    color: #1E2A38;
+  background: linear-gradient(110deg, rgba(255,255,255,0) 38%, rgba(255,255,255,0.65) 47%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.65) 53%, rgba(255,255,255,0) 62%), linear-gradient(180deg, #1E2A38 0%, #9FB3C8 16%, #FFFFFF 30%, #A7B7C6 47%, #41525F 52%, #0E141A 62%, #5C7385 78%, #D7E2EC 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.metalli-sm {
+    --convexity: 3;
+    font-size: 0.8em;
+  }
+
+  .metalli-m {
+    --convexity: 3;
+    font-size: 1em;
+  }
+
+  .metalli-lg {
+    --convexity: 3;
+    font-size: 1.25em;
+  }
+
+  .metalli-xlg {
+    --convexity: 3;
+    font-size: 1.5625em;
+  }
+
+
+  .metalli-card {
+    --convexity: 1;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    float: left;
+    line-height: 1.5em;
+    margin: 1rem;
+    min-height: 240px;
+    overflow: hidden;
+    padding: 1em 1em;
+    width: 348px;
+        box-shadow:0 2px 10px rgba(0,0,0,.1);
+  }
+
+  .metalli-card.metalli-sm {
+    min-height: calc(0.8 * 240px);
+    width: calc(0.8 * 388px);
+  }
+
+  .metalli-card.metalli-lg {
+    min-height: calc(1.25 * 240px);
+    width: calc(1.25 * 388px);
+  }
+
+  .metalli-card.metalli-xlg {
+    min-height: calc(1.5625 * 240px);
+    width: calc(1.5625 * 388px);
+  }
+
+  .metalli-button {
+    background: white;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    line-height: 1.5em;
+    margin: 0 0.75em 0.5em 0.75em;
+    outline: none;
+    padding: 0.5em 1em;
+  }
+
+  .metalli-button:focus > .metal {
+    opacity: 0.75;
+  }
+
+  .metalli-card .metalli-button {
+    border-radius: 1.25em;
+    box-shadow: #ffffff80 0.0625em 0.0625em 0px, #00000080 -0.0625em -0.0625em 0px !important;
+    margin: 0.5em 1em 0.5em 0;
+    padding: 0.5em 1.5em;
+  }
+
+  .metalli-card .metalli-button:focus {
+    outline: none;
+  }
+
+.metallic-text {
+    text-shadow: none !important;
+}
