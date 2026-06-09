@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Puzzle Piece Generator</title>
+<link rel="stylesheet" href="/css/puzzleGem_style.css">
+
+</head>
+<body>
+
+<!-- CONTROLS -->
+
+<div class="sidebar">
+
+  <h1>🧩 Puzzle Generator</h1>
+
+  <div class="control">
+    <label>
+      Piece Size
+      <span id="sizeValue">260</span>
+    </label>
+
+    <input type="range" id="size" min="120" max="420" value="260">
+  </div>
+
+  <div class="control">
+    <label>
+      Tab Size
+      <span id="tabValue">28</span>
+    </label>
+
+    <input type="range" id="tab" min="10" max="60" value="28">
+  </div>
+
+  <div class="control">
+    <label>
+      Corner Radius
+      <span id="radiusValue">18</span>
+    </label>
+
+    <input type="range" id="radius" min="0" max="40" value="18">
+  </div>
+
+  <div class="control">
+    <label>
+      Top
+    </label>
+
+    <select id="top">
+      <option value="-1">Hole</option>
+      <option value="0">Flat</option>
+      <option value="1" selected>Tab</option>
+    </select>
+  </div>
+
+  <div class="control">
+    <label>
+      Right
+    </label>
+
+    <select id="right">
+      <option value="-1">Hole</option>
+      <option value="0">Flat</option>
+      <option value="1" selected>Tab</option>
+    </select>
+  </div>
+
+  <div class="control">
+    <label>
+      Bottom
+    </label>
+
+    <select id="bottom">
+      <option value="-1" selected>Hole</option>
+      <option value="0">Flat</option>
+      <option value="1">Tab</option>
+    </select>
+  </div>
+
+  <div class="control">
+    <label>
+      Left
+    </label>
+
+    <select id="left">
+      <option value="-1" selected>Hole</option>
+      <option value="0">Flat</option>
+      <option value="1">Tab</option>
+    </select>
+  </div>
+
+  <button id="randomBtn">
+    Randomize
+  </button>
+
+</div>
+
+<!-- PREVIEW -->
+
+<div class="preview">
+  
+  <div class="piece-wrapper">
+    <div class="piece" id="piece"></div>
+  </div>
+
+  <svg width="0" height="0">
+    <defs>
+      <clipPath id="piece-clip">
+        <path id="piece-path"></path>
+      </clipPath>
+    </defs>
+  </svg>
+
+</div>
+
+<script src="/js/puzzleGem_script.js"></script>
+
+</body>
+</html>

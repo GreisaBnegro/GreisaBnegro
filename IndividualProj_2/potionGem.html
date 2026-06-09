@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Potion Creature Game</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Times New Roman', Times, serif;
+    background:linear-gradient(#1b1035,#090016);
+    color:white;
+    text-align:center;
+}
+
+h1{
+    margin-top:20px;
+    color:#40ff00;
+}
+
+.game{
+    padding:20px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:25px 0;
+}
+
+button{
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:12px;
+    font-size:28px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor:pointer;
+    background:#442288;
+    color:rgb(122, 122, 122);
+    transition:0.2s;
+    box-shadow:0 0 10px rgba(255,255,255,0.2);
+}
+
+button:hover{
+    transform:scale(1.1);
+    background:#8448d4;
+    color: limegreen;
+}
+
+.mix-btn{
+    width:180px;
+    background:#a80000;
+    color: #bababa;
+}
+
+.cauldron{
+    width:220px;
+    height:220px;
+    margin:20px auto;
+    border-radius:50%;
+    border:10px solid #555;
+    position:relative;
+    overflow:hidden;
+    background: radial-gradient(#8d8884 0%, #222 60%);
+    box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+.liquid{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:62%;
+    background:radial-gradient(limegreen 0%, #a2a2a2 99%);
+
+    animation:bubble 2s infinite ease-in-out;
+}
+
+@keyframes bubble{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0);}
+}
+
+#current{
+    font-size:22px;
+    color:#00ff48;
+}
+
+#result{
+    margin-top:30px;
+    font-size:32px;
+    min-height:100px;
+}
+
+.sparkle{
+    animation:sparkle 1s infinite alternate;
+}
+
+@keyframes sparkle{
+    from{
+        text-shadow:0 0 5px white;
+    }
+    to{
+        text-shadow:
+            0 0 10px rgb(164, 164, 164),
+            0 0 20px rgb(84, 255, 0),
+            0 0 30px white;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="game">
+
+<h1>🧪 Potion Creature Game</h1>
+
+<div class="buttons">
+    <button onclick="add('x')">X</button>
+    <button onclick="add('y')">Y</button>
+    <button onclick="add('z')">Z</button>
+    <button onclick="add('a')">A</button>
+    <button onclick="add('b')">B</button>
+    <button onclick="add('c')">C</button>
+</div>
+
+<div class="cauldron">
+    <div class="liquid"></div>
+</div>
+
+<h2>Current Mix:</h2>
+<div id="current">None</div>
+
+<br>
+
+<button class="mix-btn" onclick="mixPotion()">
+    MIX POTION
+</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+let ingredients = [];
+
+function add(letter){
+    ingredients.push(letter);
+    document.getElementById("current").innerText =
+        ingredients.join(" + ");
+}
+
+function mixPotion(){
+
+    const mix = ingredients.sort().join("");
+
+    const recipes = {
+        "xyz": "✨ Sparkling Dragonfly ᖭི༏ᖫྀ",
+        "abc": "🐆 Magical Panther",
+        "bx": "🦇 Dark Bat",
+        "ac": "🐎 Majestic Horse",
+        "yz": "🐉 Baby Snake",
+        "cx": "🐸 Mystic Frog",
+        "ay": "🕷️ Shadow Spider",
+        "cz": "🦋 Crystal Butterfly"
+    };
+
+    const result = document.getElementById("result");
+
+    if(recipes[mix]){
+        result.innerHTML =
+            `<div class="sparkle">${recipes[mix]}</div>`;
+    }else{
+        result.innerHTML =
+            "💨 The potion exploded...";
+    }
+
+    ingredients = [];
+    document.getElementById("current").innerText = "None";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnet Case File</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+
+    background-color: #E5E5F7;
+
+    background-image:
+        /* Pattern 1 */
+        radial-gradient(
+            circle at 50% 100%,
+            transparent 20%,
+            rgba(148, 68, 248, 0.35) 21%,
+            rgba(146, 68, 247, 0.35) 34%,
+            transparent 35%,
+            transparent
+        ),
+        radial-gradient(
+            circle at 50% 0%,
+            transparent 20%,
+            rgba(68, 76, 247, 0.35) 21%,
+            rgba(68, 76, 247, 0.35) 34%,
+            transparent 35%,
+            transparent
+        ),
+
+        /* Pattern 2 */
+        radial-gradient(
+            circle 23px at 20px 8px,
+            rgba(68, 76, 247, 0.25) 23px,
+            transparent 24px
+        ),
+        radial-gradient(
+            circle 23px at 20px 32px,
+            rgba(229, 229, 247, 0.9) 23px,
+            transparent 24px
+        ),
+        linear-gradient(
+            rgba(240, 229, 247, 0.3) 50%,
+            rgba(146, 68, 247, 0.15) 50%
+        );
+
+    background-size:
+        40px 30px,
+        40px 30px,
+        40px 40px,
+        40px 40px,
+        40px 40px;
+
+    background-position:
+        0 0,
+        -20px 0,
+        0 0,
+        20px 0,
+        0 0;
+
+    background-blend-mode: multiply;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: justify;
+    text-justify: inter-word;
+    max-width: 600px;
+}
+
+h1 {
+    color: #8844f7;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #444;
+    line-height: 1.6;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>A short story about magnets</h1>
+    <p>
+        Magnets are distinguished materials that produce a magnetic field through the precise alignment and motion of electrons within their atomic structure. Each possesses a north and south pole, with opposite poles attracting and like poles repelling. Magnetic behavior may be classified as ferromagnetic, exemplified by iron or neodymium; paramagnetic, exhibiting subtle attraction; or diamagnetic, experiencing gentle repulsion. Their applications are both profound and pervasive, encompassing electric motors, generators, magnetic storage, and magnetic resonance imaging. At the atomic level, magnetism derives from electron spin and orbital motion, and when atomic magnetic moments achieve concerted alignment, the material exhibits a coherent and manifest macroscopic magnetization.
+    </p>
+</div>
+
+</body>
+</html>

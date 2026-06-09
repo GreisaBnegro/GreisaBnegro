@@ -1,0 +1,434 @@
+/* ==========================
+   RESET
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================
+   VARIABLES
+========================== */
+
+:root {
+    --bg-dark: #07111f;
+    --bg-light: #12263f;
+
+    --panel: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.15);
+
+    --text: #ffffff;
+    --accent: #38bdf8;
+
+    --water: #2196f3;
+}
+
+/* ==========================
+   PAGE
+========================== */
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--bg-dark),
+            var(--bg-light)
+        );
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+    padding: 20px;
+}
+
+.app {
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+}
+
+header p {
+    opacity: 0.8;
+}
+
+/* ==========================
+   PANELS
+========================== */
+
+.panel {
+    background: var(--panel);
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    backdrop-filter: blur(10px);
+}
+
+.panel h2 {
+    margin-bottom: 15px;
+    color: #9be8ff;
+}
+
+/* ==========================
+   FORM GRID
+========================== */
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap: 15px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 0.95rem;
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
+input,
+select {
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 1rem;
+
+    background: white;
+
+    color: black;
+}
+
+input[type="range"] {
+    padding: 0;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.buttonRow {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            45deg,
+            #0284c7,
+            #38bdf8
+        );
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* ==========================
+   STATUS CARDS
+========================== */
+
+.statusGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(200px, 1fr)
+        );
+
+    gap: 15px;
+}
+
+.card {
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card div {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* ==========================
+   TIME SLIDER
+========================== */
+
+#timeSlider {
+    width: 100%;
+}
+
+#timeDisplay {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ==========================
+   SCENE
+========================== */
+
+#scene {
+    position: relative;
+
+    width: 100%;
+
+    height: 450px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            #87ceeb,
+            #dff6ff
+        );
+}
+
+/* ==========================
+   SCENE LAYERS
+========================== */
+
+#backgroundLayer,
+#cloudLayer,
+#weatherLayer,
+#waterLayer,
+#moleculeLayer,
+#phaseLayer,
+#steamLayer,
+#snowLayer {
+    position: absolute;
+    inset: 0;
+}
+
+/* ==========================
+   WATER
+========================== */
+
+#waterLayer {
+    height: 30%;
+
+    top: auto;
+
+    bottom: 0;
+
+    background:
+        linear-gradient(
+            var(--water),
+            #0f4fa8
+        );
+}
+
+/* ==========================
+   PARTICLES
+========================== */
+
+.steamParticle,
+.cloud,
+.raindrop,
+.snowflake,
+.iceCube {
+    position: absolute;
+}
+
+/* ==========================
+   CANVAS
+========================== */
+
+canvas {
+    width: 100%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.04
+        );
+
+    border-radius: 12px;
+}
+
+/* ==========================
+   MOLECULE VIEW
+========================== */
+
+#moleculeCanvas {
+    min-height: 350px;
+}
+
+/* ==========================
+   SNOW CRYSTAL
+========================== */
+
+#crystalContainer {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 320px;
+}
+
+#crystalSVG {
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.04
+        );
+
+    border-radius: 12px;
+}
+
+#crystalNotes {
+    margin-top: 15px;
+
+    text-align: center;
+}
+
+/* ==========================
+   SCIENTIFIC NOTES
+========================== */
+
+#scientificNotes {
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    min-height: 120px;
+
+    line-height: 1.6;
+}
+
+/* ==========================
+   NOTEBOOK
+========================== */
+
+#notebookEntries {
+    min-height: 200px;
+}
+
+.noteEntry {
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+    border-left:
+        4px solid
+        var(--accent);
+
+    padding: 10px;
+
+    margin-bottom: 10px;
+
+    border-radius: 8px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 900px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #scene {
+        height: 320px;
+    }
+
+    .buttonRow {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
