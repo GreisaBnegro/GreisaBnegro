@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>Findly Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div>
+      <h1>⌖ Findly</h1>
+      <p>Find shops, items and places</p>
+    </div>
+
+    <div class="nav-right">
+      <h1 id="greeting">Hi there!</h1>
+      
+    </div>
+  </header>
+
+  <main>
+
+    <!-- CALENDAR -->
+    <section class="card calendar-card">
+      <div class="section-header">
+        <div>
+          <h2>Calendar</h2>
+          <p>Previous · Current · Next month</p>
+        </div>
+
+        <div>
+            <div id="clock">00:00:00</div>
+            <small id="todayDate"></small>
+        </div>
+
+        <div class="calendar-controls">
+          <button id="prevMonth">←</button>
+          <button id="todayBtn">Today</button>
+          <button id="nextMonth">→</button>
+        </div>
+      </div>
+
+      <div class="calendar-grid" id="calendars"></div>
+    </section>
+
+    <!-- BOTTOM ROW -->
+    <div class="dashboard-grid">
+
+      <!-- LEFT: NAVIGATION -->
+      <section class="card">
+        <h2>Quick navigation</h2>
+        <p>Choose a page to open</p>
+
+        <div class="navigation-list">
+            <a href="places.html" class="nav-button">
+                <span>📍 Places & Shops</span>
+                <span>→</span>
+            </a>
+            
+            <a href="items.html" class="nav-button">
+              <span>📦 My Items</span>
+              <span>→</span>
+            </a>
+
+          <a href="projects.html" class="nav-button">
+            <span>📁 My Projects</span>
+            <span>→</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- RIGHT: TO-DO LIST -->
+      <section class="card">
+        <div class="section-header">
+          <h2>To-do list</h2>
+          <span id="taskCount">0/0 done</span>
+        </div>
+
+        <form id="taskForm" class="task-form">
+          <input
+            id="taskInput"
+            type="text"
+            placeholder="Add a task..."
+            maxlength="150"
+            required
+          >
+          <script type="module" src="https://unpkg.com/metallicss@4.0.3/dist/metallicss.min.js"></script>
+          <button type="submit" class="metalli-button metalli-m metallicss" class="primary">
+            + Add
+          </button>
+        </form>
+
+        <div id="taskList"></div>
+      </section>
+
+    </div>
+
+    <!-- ITEM SEARCH -->
+    <section class="card search-card">
+      <h2>Find an item</h2>
+      <p>Search for common items and where to find them.</p>
+
+      <form id="searchForm" class="search-form">
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Battery, HDMI, screw..."
+          required
+        >
+        <script type="module" src="https://unpkg.com/metallicss@4.0.3/dist/metallicss.min.js"></script>
+        <button type="submit" class="metalli-button metalli-m metallicss" class="primary">
+          Search
+        </button>
+      </form>
+
+      <div id="searchResults"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    Findly · Your personal dashboard
+  </footer>
+
+</body>
+</html>
